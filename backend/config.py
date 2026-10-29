@@ -1,3 +1,4 @@
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -9,6 +10,13 @@ class Settings(BaseSettings):
     )
 
     DATABASE_URL: str = "postgresql://vapt:vapt_secure_2025@localhost:5432/vapt"
+
+    @field_validator("DATABASE_URL", mode="before")
+    @classmethod
+    def fix_postgres_scheme(cls, v: str) -> str:
+        if isinstance(v, str) and v.startswith("postgres://"):
+            return v.replace("postgres://", "postgresql://", 1)
+        return v
     REDIS_URL: str = "redis://localhost:6379/0"
     OLLAMA_URL: str = "http://localhost:11434"
     SECRET_KEY: str = "change-me-in-production"

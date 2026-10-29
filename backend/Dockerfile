@@ -166,6 +166,8 @@ FROM fulltools AS full
 COPY backend/ backend/
 COPY alembic.ini .
 COPY migrations/ migrations/
+COPY start-render.sh /app/start-render.sh
+RUN chmod +x /app/start-render.sh
 WORKDIR /app/backend
 EXPOSE 8000
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["/app/start-render.sh"]

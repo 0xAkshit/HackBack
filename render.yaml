@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: hackback-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    region: oregon
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hackback-db
+          property: connectionString
+      - key: REDIS_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: HACKBACK_ENV
+        value: development
+      - key: SCANNER_BACKEND
+        value: local
+
+databases:
+  - name: hackback-db
+    plan: free
+    region: oregon
