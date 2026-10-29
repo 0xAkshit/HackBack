@@ -3,10 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/0xAkshit/HackBack/actions/workflows/ci.yml/badge.svg)](https://github.com/0xAkshit/HackBack/actions/workflows/ci.yml)
 
-<p align="center">
-  <a href="https://tryhackback.tech"><img src="docs/screenshots/hero-landing.png" alt="HACKBACK - Find security risks before attackers do." width="820"></a>
-</p>
-
 Built by [0xAkshit](https://github.com/0xAkshit).
 
 A locally-hosted, air-gapped VAPT tool: point it at an authorized target
