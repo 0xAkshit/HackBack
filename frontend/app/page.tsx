@@ -68,8 +68,8 @@ export default function LandingPage() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link href="/scan/new" className="text-sm font-bold hover:opacity-75">Sign in</Link>
-            <Link href="/scan/new" className="btn-brutal text-[#09090b] px-5 py-2 rounded-full text-sm font-bold">
+            <Link href="/sign-in" className="text-sm font-bold hover:opacity-75">Sign in</Link>
+            <Link href="/sign-up" className="btn-brutal text-[#09090b] px-5 py-2 rounded-full text-sm font-bold">
               Sign up
             </Link>
           </div>
@@ -295,10 +295,10 @@ export default function LandingPage() {
           </h2>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link href="/scan/new" className="btn-brutal text-[#09090b] px-8 py-4 rounded-full font-bold text-lg">
+            <Link href="/sign-up" className="btn-brutal text-[#09090b] px-8 py-4 rounded-full font-bold text-lg">
               Create a free account
             </Link>
-            <Link href="/scan/new" className="bg-white text-[#09090b] border-2 border-[#09090b] px-8 py-4 rounded-full font-bold text-lg shadow-[3px_3px_0px_#09090b]">
+            <Link href="/sign-in" className="bg-white text-[#09090b] border-2 border-[#09090b] px-8 py-4 rounded-full font-bold text-lg shadow-[3px_3px_0px_#09090b]">
               Sign in
             </Link>
           </div>
