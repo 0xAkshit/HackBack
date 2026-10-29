@@ -5,12 +5,6 @@
 
 Built by [0xAkshit](https://github.com/0xAkshit).
 
-A locally-hosted, air-gapped VAPT tool: point it at an authorized target
-domain and it runs 8 scanning modules in parallel, deterministically scores
-every finding (CVSS v3.1), optionally adds AI-generated plain-English
-descriptions via a local LLM, and produces a PDF report plus a live web
-dashboard. No external API calls - everything runs on your own network.
-
 > **Two ways to run HACKBACK:**
 > - **Self-hosted (this repo):** `docker compose up` → enter a domain → tick the
 >   authorization box → scan. No account, no sign-in, no email verification -
